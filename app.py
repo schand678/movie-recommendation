@@ -60,7 +60,7 @@ movie-recommender/
 │
 ├── app.py                  # Main Streamlit app
 ├── movies.csv              # Cleaned movie data
-├── recommender.py          # Logic for similarity and matching
+├── recommender.py          # Logic for similarity and matching (merged into app.py for now)
 ├── requirements.txt        # Python dependencies
 └── README.md               # Project description
 ```
@@ -122,3 +122,22 @@ if st.button("Recommend"):
             st.write(f"- {title}")
     except IndexError:
         st.warning("Movie not found. Try another title.")
+
+# requirements.txt
+
+"""
+streamlit
+pandas
+scikit-learn
+"""
+
+# Sample movies.csv (include this manually or generate via notebook)
+
+"""
+title,overview
+The Matrix,A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.
+Inception,A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea.
+Interstellar,A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.
+The Dark Knight,When the menace known as the Joker emerges, Batman must accept one of the greatest psychological and physical tests of his ability.
+Fight Club,An insomniac office worker and a devil-may-care soap maker form an underground fight club.
+"""
